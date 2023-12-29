@@ -5,7 +5,7 @@ install:
 	poetry install
 
 test:
-	poetry run pytest -ssv --cov --cov-report=html
+	poetry run pytest -ssv --cov --cov-report=xml
 
 build:
 	poetry build
