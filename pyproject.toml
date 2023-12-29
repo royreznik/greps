@@ -1,12 +1,12 @@
 [tool.poetry]
 name = "greps"
-version = "1.0.0"
-description = ""
+version = "1.0.1"
+description = "Simple ipython magic that do grep over ipython outputs"
 authors = ["Roy Reznik <royreznik@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = "^3.8"
 ipython = "^8.19.0"
 
 
