@@ -1,5 +1,5 @@
 setup:
-	python3.10 -m pip install poetry
+	python3 -m pip install poetry
 
 install:
 	poetry install

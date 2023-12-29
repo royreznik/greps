@@ -1,14 +1,21 @@
 [tool.poetry]
 name = "greps"
-version = "1.0.0"
-description = ""
+version = "1.0.2"
+description = "Simple ipython magic that do grep over ipython outputs"
 authors = ["Roy Reznik <royreznik@gmail.com>"]
 readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12"
+]
 
 [tool.poetry.dependencies]
-python = "^3.10"
-ipython = "^8.19.0"
-
+python = "^3.8"
+ipython = "*"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.4.3"
