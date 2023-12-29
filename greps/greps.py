@@ -27,7 +27,7 @@ class Grep(Magics):
         return parser
 
     @line_magic  # type: ignore[misc]
-    def grep(self, params: str = "") -> str:
+    def greps(self, params: str = "") -> str:
         parser = self.get_args_parser()
         ipython = get_ipython()  # type: ignore[no-untyped-call]
         args = parser.parse_args(params.split())

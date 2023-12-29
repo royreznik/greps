@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "greps"
-version = "0.1.0"
+version = "1.0.0"
 description = ""
 authors = ["Roy Reznik <royreznik@gmail.com>"]
 readme = "README.md"
@@ -15,6 +15,7 @@ pytest = "^7.4.3"
 ruff = "^0.1.9"
 mypy = "^1.8.0"
 black = "^23.12.1"
+pytest-cov = "^4.1.0"
 
 [build-system]
 requires = ["poetry-core"]
