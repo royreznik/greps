@@ -1,3 +1,5 @@
+BUMP_PART ?=
+
 setup:
 	python3 -m pip install poetry
 
@@ -19,3 +21,6 @@ format:
 lint:
 	poetry run ruff greps/ tests/
 	poetry run mypy greps/ tests/
+
+bump:
+	poetry run bump-my-version bump $(BUMP_PART)

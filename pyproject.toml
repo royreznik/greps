@@ -5,6 +5,7 @@ description = "Simple ipython magic that do grep over ipython outputs"
 authors = ["Roy Reznik <royreznik@gmail.com>"]
 readme = "README.md"
 classifiers = [
+    "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
@@ -23,11 +24,35 @@ ruff = "^0.1.9"
 mypy = "^1.8.0"
 black = "^23.12.1"
 pytest-cov = "^4.1.0"
+bump-my-version = "^0.15.4"
+
+
+[tool.mypy]
+strict = true
+
+
+[tool.bumpversion]
+current_version = "1.0.2"
+commit = true
+tag = true
+tag_name = "v{new_version}"
+message = "Version updated from {current_version} to {new_version}"
+parse = "(?P<major>\\d+)\\.(?P<minor>\\d+)\\.(?P<patch>\\d+)(\\.(?P<dev>\\d+))?"
+serialize = [
+    "{major}.{minor}.{patch}.{dev}",
+    "{major}.{minor}.{patch}"
+]
+
+[[tool.bumpversion.files]]
+filename = "greps/__init__.py"
+
+[[tool.bumpversion.files]]
+filename = "pyproject.toml"
+regex = true
+search = "^version = \"{current_version}\""
+replace = "version = \"{new_version}\""
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
-
-[tool.mypy]
-strict = true
 
