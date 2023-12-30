@@ -1,8 +1,30 @@
-name: CI
-on: pull_request
+name: Test
+on:
+  push:
+    branches:
+      - master
+  pull_request:
 
 jobs:
-  ci:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+      - uses: actions/cache@v3
+        id: cached-poetry-dependencies
+        with:
+          path: .venv
+          key: venv-Linux-3.11-${{ hashFiles('**/pyproject.toml') }}
+      - name: install deps
+        if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
+        run: make install
+      - name: lint
+        run: make lint
+
+  test:
     strategy:
       fail-fast: false
       matrix:
