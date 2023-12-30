@@ -1,8 +1,9 @@
 # greps
-![Code style](https://img.shields.io/badge/code%20style-black-black)
+[![Tests](https://github.com/royreznik/greps/actions/workflows/tests.yml/badge.svg)](https://github.com/royreznik/greps/actions/workflows/tests.yml)
 ![GitHub License](https://img.shields.io/github/license/royreznik/greps)
-![GitHub License](https://img.shields.io/github/license/royreznik/greps)
+[![codecov](https://codecov.io/gh/royreznik/greps/graph/graph/badge.svg?token=60063VB6J2)](https://codecov.io/gh/royreznik/greps)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/greps)
+![Code style](https://img.shields.io/badge/code%20style-black-black)
 
 greps is a super simple ipython magic that allow you to use `grep` over IPython output.
 
