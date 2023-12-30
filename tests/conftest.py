@@ -10,5 +10,6 @@ from greps import load_ipython_extension
 def ip() -> Generator[TerminalInteractiveShell, None, None]:
     ipython = get_ipython()  # type: ignore[no-untyped-call]
     load_ipython_extension(ipython)
+
     yield ipython
     TerminalInteractiveShell.clear_instance()
